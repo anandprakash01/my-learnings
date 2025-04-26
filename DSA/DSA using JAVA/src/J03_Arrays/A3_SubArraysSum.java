@@ -27,8 +27,8 @@ public class A3_SubArraysSum {
     public static void main(String args[]){
         int a[]={3,2,6,1,5};
         int b[]={1,-2,6,-1,-3};
-        //allPairs(a);
-        PrintallSubarrays(a);
+        allPairs(a);
+//        PrintallSubarrays(a);
         //maxSubarraySum(b);
     }
 }

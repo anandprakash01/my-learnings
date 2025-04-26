@@ -7,7 +7,7 @@ import java.util.Queue;
 public class G1_Graph_Creation {
     static class Edge{
         int src;
-        int dest;
+        int dest;//destination
         int wt;
         public Edge(int src,int dest, int wt){
             this.src = src;

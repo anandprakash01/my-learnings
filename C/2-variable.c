@@ -22,9 +22,9 @@ int main()
     char star = '*';
     // char hr= "anand" ;
 
-    printf("%d", num);
-    printf("%f", pi);
-    printf("%c", star);
+    printf("%d\n", num);
+    printf("%f\n", pi);
+    printf("%c\n", star);
     printf("\n");
 
     unsigned int integer = 2; // positive integer (we can take big value)

@@ -6,7 +6,7 @@ public class B1_TypeConversion {
     public static void main(String args[]){
         //compiler automatically change to compatible(the largest size) type
         //byte--> short--> char--> int--> float--> long--> double
-        // -----> this conversion is called type conversion or widing/implicit conversion
+        // -----> this conversion is called type conversion or widening/implicit conversion
         byte a=10;
         short b=20;
         char c='h';
