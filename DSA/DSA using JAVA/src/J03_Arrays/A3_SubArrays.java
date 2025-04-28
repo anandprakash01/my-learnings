@@ -1,6 +1,6 @@
 package J03_Arrays;
 
-public class A3_SubArraysSum {
+public class A3_SubArrays {
 
     public static void allPairs(int arr[]){//contiguous pairs
         int total=0;
@@ -12,7 +12,7 @@ public class A3_SubArraysSum {
         }
         System.out.println("Total no of Pairs = "+total);
     }
-    public static void PrintallSubarrays(int a[]){
+    public static void PrintAllSubarrays(int[] a){
         int ts=0;
         for(int i=0;i<a.length;i++){
             for(int j=i;j<a.length;j++){
@@ -30,9 +30,8 @@ public class A3_SubArraysSum {
     public static void main(String args[]){
         int a[]={3,2,6,1,5};
         int b[]={1,-2,6,-1,-3};
-//        allPairs(a);
-//        PrintallSubarrays(a);
-//        maxSubarraySum(b);
+        allPairs(a);
+//        PrintAllSubarrays(a);
     }
 }
 
