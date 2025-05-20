@@ -4,7 +4,6 @@ package A_PracticeCode;
 import java.util.ArrayList;
 
 public class dikshtras {
-
     static class Edge{
         int src;
         int dest;
