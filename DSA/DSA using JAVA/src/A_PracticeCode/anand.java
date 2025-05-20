@@ -1,7 +1,7 @@
 package A_PracticeCode;
 import java.util.*;
 public class anand {
-    //Mock hard level 1
+    // Mock hard level 1
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
