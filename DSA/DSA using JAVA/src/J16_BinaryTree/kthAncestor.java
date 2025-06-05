@@ -1,6 +1,6 @@
-package J15_BinaryTree;
+package J16_BinaryTree;
 
-public class PrintkthLevel_Recursive {
+public class kthAncestor {
     static class Node{
         int data;
         Node left;
@@ -11,8 +11,9 @@ public class PrintkthLevel_Recursive {
             this.right=null;
         }
     }
+
     public static void main(String[] args){
-        /*                           1
+         /*                          1
                                   /     \
                                  2       3
                                 / \     / \
@@ -25,21 +26,28 @@ public class PrintkthLevel_Recursive {
         root.left.right=new Node(5);
         root.right.left=new Node(6);
         root.right.right=new Node(7);
-        int k=2;
-        //root level =1
-        kLevel(root,1,k);
+        System.out.println();
+        kthAncestor(root,5,2);// kth ancestor of a node
     }
 
-    //kth level of a tree
-    public static void kLevel(Node root,int level, int k){
+    //kth ancestor of node
+    public static int kthAncestor(Node root,int n,int k){
         if(root==null){
-            return;
+            return -1;
         }
-        if(level==k){
-            System.out.print(root.data+" ");
+        if(root.data==n){
+            return 0;
         }
-        kLevel(root.left,level+1,k);
-        kLevel(root.right,level+1,k);
-
+        int left=kthAncestor(root.left,n,k);
+        int right=kthAncestor(root.right,n,k);
+        if(left==-1 && right==-1){
+            return -1;
+        }
+        int max=Math.max(left,right);   //if other is 0 or -1 it will remove that and give us max
+        if(max+1==k){
+            System.out.println(root.data);
+        }
+        return max+1;
     }
+
 }

@@ -1,6 +1,13 @@
 package J03_Arrays;
 
 public class A4_MaxSubarraysSum {
+    public static void main(String args[]){
+        int[] a={3,2,6,1,5};
+        int[] b={1,-2,6,-1,-3};
+//        maxSubarraySum(a);
+        maxSumPrefixApproach(a);
+        kadanesAlgo(b);
+    }
     public static void maxSubarraySum(int[] a){
         int maxSum=Integer.MIN_VALUE;
         int currentSum=0;
@@ -39,19 +46,13 @@ public class A4_MaxSubarraysSum {
         }
         for(int i=0;i<a.length;i++){        //i==Starting point
             for(int j=0;j<a.length;j++){    //j==ending point
-                // if(i==0){
-                //     cs=prefixSum[j];
-                // }
-                // else{
-                //     cs=prefixSum[j]-prefixSum[i-1];
-                // }
                 cs= i==0? prefixSum[j] : prefixSum[j]-prefixSum[i-1];
                 maxsum=Math.max(maxsum,cs);
             }
         }
         System.out.println(maxsum);
     }
-    public static void kadanesAlgo(int a[]){ //time complexity O(n)
+    public static void kadanesAlgo(int[] a){ //time complexity O(n)
         int ms=Integer.MIN_VALUE;
         int cs=0;
         for(int i=0;i<a.length;i++){
@@ -62,12 +63,5 @@ public class A4_MaxSubarraysSum {
             ms=Math.max(ms,cs);
         }
         System.out.println(ms);
-    }
-    public static void main(String args[]){
-        int[] a={3,2,6,1,5};
-        int[] b={1,-2,6,-1,-3};
-//        maxSubarraySum(a);
-        maxSumPrefixApproach(b);
-        kadanesAlgo(b);
     }
 }

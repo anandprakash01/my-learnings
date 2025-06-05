@@ -1,8 +1,9 @@
 package J03_Arrays;
 
 public class A3_SubArrays {
-
-    public static void allPairs(int arr[]){//contiguous pairs
+    public static void allPairs(int[] arr){
+        // contiguous pairs : subarray
+        // non-contiguous pairs : subsets
         int total=0;
         for(int i=0;i<arr.length-1;i++){
             for(int j=i+1;j<arr.length;j++){
@@ -12,7 +13,7 @@ public class A3_SubArrays {
         }
         System.out.println("Total no of Pairs = "+total);
     }
-    public static void PrintAllSubarrays(int[] a){
+    public static void printAllSubarrays(int[] a){
         int ts=0;
         for(int i=0;i<a.length;i++){
             for(int j=i;j<a.length;j++){
@@ -25,13 +26,11 @@ public class A3_SubArrays {
         }
         System.out.println("Total no of Subarrays = "+ts);
     }
-
-
-    public static void main(String args[]){
-        int a[]={3,2,6,1,5};
-        int b[]={1,-2,6,-1,-3};
+    public static void main(String[] args){
+        int[] a={3,2,6,1,5};
+//        int[] b={1,-2,6,-1,-3};
         allPairs(a);
-//        PrintAllSubarrays(a);
+        printAllSubarrays(a);
     }
 }
 

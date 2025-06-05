@@ -1,4 +1,4 @@
-package J15_BinaryTree;
+package J16_BinaryTree;
 
 public class DiameterAndHeight {
     static class Node{

@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 public class FractionalKnapsack {
     /*  given the weight and values of n items,put these in a knapsack(bag or something) of capacity w to
-        get max value in tha knapsack   */
+        get max value in the knapsack   */
     public static void main(String[] args) {
         int[] value = {60, 100, 120};
         int[] weight = {10, 20, 30};
@@ -16,7 +16,7 @@ public class FractionalKnapsack {
             ratio[i][0]=i;
             ratio[i][1]= value[i]/(double)weight[i];
         }
-        Arrays.sort(ratio, Comparator.comparingDouble(o -> o[1])); //sorting in basis of ratio coloum
+        Arrays.sort(ratio, Comparator.comparingDouble(o -> o[1])); //sorting in basis of ratio column
         int maxval=0;
         int capacity=w;
 

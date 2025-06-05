@@ -8,13 +8,11 @@ class Student{
     Student(){
         System.out.println("A new Student is Registered");
     }
-
     Student(int rollNo, String name, int age){
         this.rollNo = rollNo;
         this.name = name;
         this.age = age;
     }
-
     // setters
     public void setName(String name) {this.name = name;}
     public void setRollNo(int rollNo){this.rollNo = rollNo;}
@@ -25,15 +23,9 @@ class Student{
             System.out.println("Age cannot be Negative!!!");
     }
     // getters
-    public int getRollNo(){
-        return rollNo;
-    }
-    public int getAge() {
-        return age;
-    }
-    public String getName(){
-        return name;
-    }
+    public int getRollNo(){ return rollNo; }
+    public int getAge() { return age; }
+    public String getName(){ return name; }
 
     public void printDetails(){
         System.out.println("Details are: ");

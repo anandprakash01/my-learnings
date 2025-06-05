@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class A5_ContainerWithMostWater {
     /* for given n lines on x-axis, use 2 lines to form a container such that it holds maxWater,
-    width is same(i.e. 1) between the lines;*/
+    width is same(i.e. 1) between the lines; */
     private static void container(ArrayList<Integer> height){
         int l=0;
         int r=height.size()-1;

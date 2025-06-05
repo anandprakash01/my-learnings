@@ -27,10 +27,10 @@ public class A11_RemoveDuplicates {
 //        }
 //        return i+1;
 
-//         Same logic with different style
+//         Same logic with different writing
         int k=0;
-        for(int x=0;x<nums.length;x++){
-            if(x+1!=nums.length && nums[x]!=nums[x+1]){
+        for(int x=0;x<nums.length-1;x++){
+            if(nums[x]!=nums[x+1]){
                 nums[++k]=nums[x+1];
             }
         }

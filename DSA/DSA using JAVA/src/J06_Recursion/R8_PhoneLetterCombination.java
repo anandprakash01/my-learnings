@@ -1,9 +1,9 @@
-package J05_String;
+package J06_Recursion;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PhoneLetterCombination {
+public class R8_PhoneLetterCombination {
 //    Given a string containing digits from 2-9 inclusive, return all possible
 //    letter combinations that the number could represent. Return the answer in any order.
 //    Input: digits = "23"
@@ -41,7 +41,7 @@ public class PhoneLetterCombination {
         for(char letter:letters.toCharArray()){
             combination.append(letter);
             backtrack(result,combination,digits,index+1);
-            combination.deleteCharAt(combination.length()-1);
+            combination.deleteCharAt(combination.length()-1);//backtrack
         }
     }
 }

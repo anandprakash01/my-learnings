@@ -1,4 +1,4 @@
-package J15_BinaryTree;
+package J16_BinaryTree;
 
 import java.util.HashMap;
 import java.util.LinkedList;

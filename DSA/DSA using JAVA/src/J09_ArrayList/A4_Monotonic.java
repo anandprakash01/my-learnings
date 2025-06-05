@@ -3,11 +3,11 @@ package J09_ArrayList;
 import java.util.ArrayList;
 
 public class A4_Monotonic {
-    /* An Arraylist is monotonic if it is either monotone increasing or monotone decreasing.
-     An Arraylist nums is monotone increasing if for all i<=j,nums.get(i)<=nums.get(j).
-     An Arraylist nums is monotone decreasing if for all i <= j, nums.get(i) >= nums.get(j).
+    /* An Arraylist is monotonic if it is either increasing or monotone decreasing.
+     An Arraylist nums is monotonic increasing if for all i<=j,nums.get(i)<=nums.get(j).
+     An Arraylist nums is monotonic decreasing if for all i <= j, nums.get(i) >= nums.get(j).
      Given an integer Arraylist nums, return true if the given list is monotonic, or false otherwise. */
-    public static boolean monoton(ArrayList<Integer> arrlist){
+    public static boolean monotonic(ArrayList<Integer> arrlist){
         boolean incre=true;
         boolean decre=true;
         for(int i=1;i<arrlist.size();i++){
@@ -28,7 +28,7 @@ public class A4_Monotonic {
         arrlist.add(4);
         arrlist.add(2);
         arrlist.add(0);
-        System.out.println(monoton(arrlist));
+        System.out.println(monotonic(arrlist));
 
     }
 

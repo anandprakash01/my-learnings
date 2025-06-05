@@ -1,26 +1,29 @@
 package J03_Arrays;
 
-public class A7_CheckNoAppearsTwice {
-    public static boolean checkifNoappearsTwice(int a[]){
-        int check[]=new int[100];
-        for(int i=0;i<check.length;i++){
-            check[i]=0;
-        }
-        for(int i=0;i<a.length;i++){
-            if(check[a[i]]==1){
-                System.out.println(a[i]+" is appering twice.");
-                return true;
+import java.util.Arrays;
+import java.util.HashSet;
 
+public class A7_CheckNoAppearsTwice {
+    public static void main(String[] args){
+        int[] arr={2,3,5,1,10,11,8,10};
+        System.out.println(checkNo(arr));// T: O(n) S:O(n)
+//        using sorting
+        Arrays.sort(arr);
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]==arr[i-1]){
+                System.out.println("Duplicate");
+                return;
             }
-            else{
-                check[a[i]]=1;
-            }
+        }
+        System.out.println("No Duplicate Found");
+    }
+    public static boolean checkNo(int[] arr){
+        HashSet<Integer> seen = new HashSet<>();
+        for(int num:arr){
+            if(seen.contains(num)) return true;
+            seen.add(num);
         }
         return false;
-    }
-    public static void main(String args[]){
-        int arr[]={2,3,5,1,10,11,8,10};
-        System.out.println(checkifNoappearsTwice(arr));
     }
 }
 

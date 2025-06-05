@@ -3,7 +3,7 @@ package J06_Recursion;
 public class R4_DuplicateStr {
 
     //non-static method
-    public void duplicateRemovedstr(String str,int idx,String newStr, boolean map[]){
+    public void duplicateRemovedstr(String str,int idx,String newStr, boolean[] map){
         char currchar = str.charAt(idx);
         if(idx == str.length()-1){
             System.out.print(newStr);
