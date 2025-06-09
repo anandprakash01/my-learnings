@@ -2,11 +2,11 @@ package J03_Arrays;
 
 public class A4_MaxSubarraysSum {
     public static void main(String args[]){
-        int[] a={3,2,6,1,5};
+        int[] a={3,2,-1,9,-2,-1,-19,6,1,5};
         int[] b={1,-2,6,-1,-3};
-//        maxSubarraySum(a);
+        maxSubarraySum(a);
+        kadanesAlgo(a);
         maxSumPrefixApproach(a);
-        kadanesAlgo(b);
     }
     public static void maxSubarraySum(int[] a){
         int maxSum=Integer.MIN_VALUE;
@@ -36,7 +36,7 @@ public class A4_MaxSubarraysSum {
         System.out.println();
     }
 
-    public static void maxSumPrefixApproach(int a[]){
+    public static void maxSumPrefixApproach(int[] a){
         int[] prefixSum=new int[a.length];
         int cs=0;                               //Time complexity O(n^2)
         int maxsum=Integer.MIN_VALUE;

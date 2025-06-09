@@ -1,9 +1,9 @@
 package J03_Arrays;
 
 public class A3_SubArrays {
+    // contiguous : subarray
+    // non-contiguous : subsets
     public static void allPairs(int[] arr){
-        // contiguous pairs : subarray
-        // non-contiguous pairs : subsets
         int total=0;
         for(int i=0;i<arr.length-1;i++){
             for(int j=i+1;j<arr.length;j++){

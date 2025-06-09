@@ -2,7 +2,6 @@
 
 int main()
 {
-
     // int, float, char
     // there is no String, Boolean type
 
